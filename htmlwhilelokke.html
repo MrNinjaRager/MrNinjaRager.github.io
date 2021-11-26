@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="NO">
+<head>
+    <meta charset="UTF-8" />
+    <title>Abdi While løkker</title>
+    <link rel="stylesheet" type="text/css" href="minStil2.css" />
+</head>
+
+
+<body>
+
+<ul>
+    <li><a href="abdihtmllokke.html">Hjem</a></li>
+    <li><a href="htmlwhilelokke.html">While-løkker</a></li>
+    <li><a href="htmluendeligelokke.html">Uendelige-løkker</a></li>
+    <li><a href="htmlforlokke.html">For-løkker</a></li>
+    <li><a href="htmleksempellokke.html">Eksempler på løkker</a></li>
+</ul>
+
+
+    <div class="ramme">
+        <h3>While-løkker</h3>
+        <p>En while-løkke eller en While loop fører ut en kode så lenge en spesifisert betingelse er korrekt.</p>
+        <figure>
+            <img src="img/lokke1.png" width=800 alt="lokke"></img>
+            <figcaption class="litenSkrift">While løkke eksempel 1</figcaption>
+        </figure>
+        <p>Det ser ut som en for, if, else i oppbygningen. Forskjellen er hva som skjer etter at koden er ført ut.</p>
+        <p>Denne koden sjekker om betingelsen fortsatt er sann, og hvis den er det, blir koden utført før vi sjekker betingelsen igjen.</p>
+        <p>Løkka kan gå uendelig helt til en betingelse blir ukorrekt eller usann. Hver gang en kodeblokke i en løkke blir utført, kaller vi det for en <b>iterasjon.</b></p>
+        <p>Her er et eksempel på valgsetninger med while-løkker.</p>
+    </div>
+    <div class="ramme">
+    <pre>
+function utfoer() {
+	var antall = document.getElementById("txtVerdi").value;
+	while (antall > 0) {
+		document.getElementById("utskrift").innerHTML += "Nok en gang"<br />";
+		antall--;
+	}
+
+}
+    </pre>
+
+    </div>
+    <div class="ramme">
+        <p>Vi skriver variabelen antall for å være tallet vi skal skrive inni tekstboksen.</p>
+        <p>Etter det skal vi skrive løkken, som skal sjekke om antallet er mer enn 0.</p>
+        <p>Hvis det er false, eller mindre enn 0, har vi ikke noe bruk for while løkken.</p>
+        <p>Dersom antallet er større enn 0, vil kodeblokken bli utført. Ved hjelp av operatoren += kan vi legge til teksten <k>Nok en gang</k></p>
+        <p>Etterpå så tar vi ned verdien til antall med 1.</p>
+        <p>Når dette er gjort, betyr det ikke at løkka er helt ferdig. Det vil si at den går til betingelsen og sjekker den på nytt. Det fortsetter sånn helt til</p>
+        <p>betingelsen blir til false og da er den ferdig utført.</p>
+    </div>
+        
+        
+
+
+ 
+
+</body>
+
+
+</html>

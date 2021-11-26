@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="NO">
+<head>
+    <meta charset="UTF-8" />
+    <title>Abdi løkke tutorial</title>
+    <link rel="stylesheet" type="text/css" href="minStil2.css" />
+
+    <script>
+    window.onload = oppstart;
+
+    function oppstart() {
+        var tekst = "";
+        for(var antall = 5; antall >= 1; antall--) {
+            tekst += antall + " little monkeys jumping on the bed,<br />";
+            tekst += (antall > 1 ? "One" : "He") + " fell out and bumped his head, <br />";
+            tekst += "Momma called the doctor, the doctor said,<br />";
+            tekst += "That's what you get for jumping on the bed!<br />";
+            if(antall > 1) {
+                tekst += (antall-1) + " little monkeys jumping on the bed!<br /><br />";
+            }
+            else {
+                tekst += "Put those monkeys straight to bed!<br /><br />";
+            }
+            document.getElementById("utskrift").innerHTML = tekst;
+        }
+    
+    }
+    </script>
+</head>
+
+
+<body>
+    <ul>
+        <li><a href="abdihtmllokke.html">Hjem</a></li>
+        <li><a href="htmlwhilelokke.html">While-løkker</a></li>
+        <li><a href="htmluendeligelokke.html">Uendelige-løkker</a></li>
+        <li><a href="htmlforlokke.html">For-løkker</a></li>
+        <li><a href="htmleksempellokke.html">Eksempler på løkker</a></li>
+    </ul>
+
+    <div class="ramme">
+        <h3>Eksempel - 5 little monkeys jumping!</h3>
+        <p>Her er et eksempel på en sang eller en vers, der hvert vers minker vi antallet med en.</p>
+        <p>Start med å skrive en paragraf for utskrift inni body-taggen.</p>
+    </div>
+    <div class="ramme">
+        <pre>
+&lt;body&gt;
+    &lt;p id="utskrift"&gt;&lt;/p&gt;
+&lt;/body&gt;
+        </pre>
+    </div>
+    <div class="ramme">
+        <p>Deretter lager vi en løkke som skal telle nedover fra 5 til 1, og i kodeblokken skal løkken lage hver og ny linje for verset.</p>
+        <p>Da skriver vi inni script-taggen.</p>
+    </div>
+    <div class="ramme">
+        <pre>
+&lt;script&gt;
+
+window.onload = oppstart;
+
+function oppstart() {
+    var tekst = "";
+    for (var antall = 5; antall >= 1; antall--) {
+        tekst += antall + " little monkeys jumping on the bed, &lt;br /&gt;";
+        tekst += "One fell out and bumped his head;&lt;br /&gt;";
+        tekst += "Momma called the doctor, the doctor said,&lt;br /&gt;";
+        tekst += "That's what you get for jumping on the bed!&lt;br /&gt;";
+        tekst += (antall-1) + " little monkeys jumping on the bed!&lt;br /&gt;&lt;br /&gt;";
+    }
+    document.getElementById("utskrift").innerHTML = tekst;
+}
+
+&lt;/script&gt;
+        </pre>
+    </div>
+    <div class="ramme">
+        <p>Med denne kodeblokken skal det kunne vise verset riktig.</p>
+        <p>Men du kan også utvide løkka og lage et annet siste vers, sånn at sangen blir ferdig.</p>
+        <p>Da lager vi <b>valgsetning</b> på linje 2 og siste linja:</p>
+    </div>
+    <div class="ramme">
+        <pre>
+for (var antall = 5; antall >= 1; antall--) {
+    tekst += antall + " little monkeys jumping on the bed, &lt;br /&gt;";
+    tekst += (antall > 1 ? "One" : "He") + " fell out and bumped his head;&lt;br /&gt;";
+    tekst += "Momma called the doctor, the doctor said,&lt;br /&gt;";
+    tekst += "That's what you get for jumping on the bed!&lt;br /&gt;";
+    if(antall > 1) {
+        tekst += (antall-1) + " little monkeys jumping on the bed!"&lt;br /&gt;&lt;br /&gt;;
+    }
+    else {
+        tekst += "Put those monkeys straight to bed!&lt;br /&gt;&lt;br /&gt;";
+    }
+}
+        </pre>
+    </div>
+    <div class="ramme">
+        <p>Test kodeblokken og sjekk om siste verset ble riktig.</p>
+        <p>Da skal koden se slik ut!</p>
+    </div>
+    <div class="ramme">
+        <p id="utskrift"></p>
+    </div>
+
+
+    
+</body>
+
+
+</html>
